@@ -1,0 +1,8 @@
+-r ../requirements.txt
+setuptools~=80.9
+pytest~=8.4
+pytest-cov~=6.2
+pytest-testmon~=2.1
+
+# Install local package in editable mode
+-e .

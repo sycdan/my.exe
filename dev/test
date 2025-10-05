@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd $PROJECT_ROOT
+pytest -v \
+  --durations=0 \
+  --cov=stoxplox \
+  --cov-report=html \
+  --cov-report=term-missing:skip-covered \
+  tests\
+  "$@"
