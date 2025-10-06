@@ -14,7 +14,7 @@ setup(
   author_email="dstace@gmail.com",
   packages=find_packages(),
   install_requires=[x for x in requirements_lines if x and not x.startswith("#")],
-  entry_points={"console_scripts": ["my=my.cli.__main__:app"]},
+  entry_points={"console_scripts": ["my=my.cli.__main__:app", "kb=my.cli.kb:app"]},
   python_requires=">=3.8",
   include_package_data=True,
   classifiers=[
