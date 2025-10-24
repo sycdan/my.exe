@@ -4,11 +4,19 @@ import sys
 import uuid
 from pathlib import Path
 
+APP_SLUG = "my"
 APP_GOOID = uuid.UUID("78b8584e-d6eb-4c35-bbc3-ed88996deb64")
+APP_CONFIG_DIR = Path(os.path.expanduser(f"~/.config/{APP_SLUG}.{APP_GOOID}"))
 REPO_DIR = Path(__file__).parent.parent
 CLI_DIR = REPO_DIR / "my" / "cli"
 VERBOSE = os.environ.get("VERBOSE", "0") == "1"
 IDENTITY = os.environ.get("IDENTITY", "id_rsa")
+
+if VERBOSE:
+  print("App config dir:", APP_CONFIG_DIR)
+  print("Repo dir:", REPO_DIR)
+  print("CLI dir:", CLI_DIR)
+  print("Identity:", IDENTITY)
 
 FINGERPRINT = os.environ.get("FINGERPRINT", "")
 if not FINGERPRINT:
