@@ -1,2 +1,4 @@
+json5==0.12.1
 python-slugify==8.0.4
 typer==0.20.0
+uuid7gen==0.1.0
