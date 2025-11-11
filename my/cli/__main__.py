@@ -31,6 +31,16 @@ def version():
   typer.echo((REPO_DIR / "VERSION").read_text().strip())
 
 
+@app.callback()
+def verbose_mode(
+  verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose output."),
+):
+  """Enable verbose mode."""
+  from my import cli
+
+  cli.VERBOSE = verbose
+
+
 load_my_apps()
 
 if __name__ == "__main__":

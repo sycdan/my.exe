@@ -1,2 +1,2 @@
 python-slugify==8.0.4
-typer==0.20
+typer==0.20.0
