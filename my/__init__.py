@@ -4,6 +4,7 @@ import sys
 import uuid
 from pathlib import Path
 
+APP_NAME = "my.py"
 APP_SLUG = "my"
 APP_GOOID = uuid.UUID("78b8584e-d6eb-4c35-bbc3-ed88996deb64")
 APP_CONFIG_DIR = Path(os.path.expanduser(f"~/.config/{APP_SLUG}.{APP_GOOID}"))

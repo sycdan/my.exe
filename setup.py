@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from my import APP_NAME
 from setuptools import find_packages, setup
 
 root = Path(__file__).parent
@@ -7,7 +8,7 @@ requirements_file = root / "requirements.txt"
 requirements_lines = requirements_file.read_text().splitlines()
 
 setup(
-  name="my.exe",
+  name=APP_NAME,
   version=(root / "VERSION").read_text().strip(),
   description="Personal commands.",
   author="Dan Stace",
